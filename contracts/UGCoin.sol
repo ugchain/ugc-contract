@@ -50,7 +50,7 @@ contract UGCoin is Multiowned, StandardToken {
         return true;
     }
     
-	function destroy(uint256 _amount) external returns (bool success){
+    function destroy(uint256 _amount) external returns (bool success){
         require(balances[msg.sender] >= _amount);
         balances[msg.sender] -= _amount;
         totalSupply -= _amount;
